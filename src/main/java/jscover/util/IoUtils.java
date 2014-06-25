@@ -593,6 +593,11 @@ public class IoUtils {
     }
 
     public String getRelativePath(File file1, File file2) {
+        System.out.println("Absolute path of file1");
+        System.out.println(file1.getAbsolutePath());
+        System.out.println("Absolute path of file2");
+        System.out.println(file2.getAbsolutePath());
+        
         if (file1.equals(file2))
             return "";
         return file1.getAbsolutePath().substring(file2.getAbsolutePath().length()+File.separator.length()).replaceAll("\\\\","/");
